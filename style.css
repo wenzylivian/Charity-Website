@@ -20,7 +20,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     padding: 1rem 2rem;
     background: rgba(0, 0, 0, 0.8); /* Transparent background */
     position: fixed;
@@ -197,10 +197,59 @@ body {
     line-height: 1.6;
 }
 
-.hero-buttons {
+/* .hero-buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
+} */
+/* Container for hero buttons */
+.hero-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Space between buttons */
+    justify-content: center;
+    align-items: center; /* Center buttons horizontally */
+    margin-top: 20px; /* Add some spacing from other content */
+}
+
+/* Individual buttons */
+.hero-buttons button {
+    display: inline-block;
+    padding: 12px 20px; /* Add padding for a more comfortable touch target */
+    font-size: 1rem; /* Ensure legibility on mobile */
+    font-weight: bold; /* Make text more prominent */
+    text-align: center;
+    color: white; /* Text color */
+    background-color: royalblue; /* Classic royal blue color */
+    border: 2px solid royalblue; /* Consistent border */
+    border-radius: 8px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth hover transition */
+    cursor: pointer;
+}
+
+/* Hover and focus effect */
+.hero-buttons button:hover,
+.hero-buttons button:focus {
+    background-color: white; /* Swap background and text color */
+    color: royalblue;
+    border-color: royalblue;
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Active effect */
+.hero-buttons button:active {
+    transform: translateY(0); /* Reset the lift effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for pressed state */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero-buttons button {
+        width: 80%; /* Ensure buttons take up most of the screen width */
+        font-size: 1.1rem; /* Slightly larger font size for better readability */
+    }
 }
 
 .hero-buttons .donate-btn, .hero-buttons .about-btn {
@@ -209,7 +258,7 @@ body {
     border: none;
     padding: 15px 30px;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -238,8 +287,11 @@ body {
     }
 
     .hero-buttons {
-        flex-direction: column;
-        gap: 15px;
+    flex-direction: column;
+    gap: 15px;
+    /* justify-content: center; */
+
+        
     }
 
     .sidebar {
