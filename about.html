@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Section</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styling */
+        .logo1 {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(90deg, #1E90FF, #87CEEB);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav .menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav .menu a:hover {
+            color: #FFD700;
+        }
+
+        nav .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav .menu {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            nav .menu.active {
+                display: flex;
+            }
+
+            nav .menu a {
+                color: #1E90FF;
+                padding: 1rem;
+                text-align: center;
+                border-bottom: 1px solid #f1f1f1;
+            }
+
+            nav .hamburger {
+                display: block;
+            }
+        }
+
+        /* About Section Styling */
+        .about {
+            padding: 4rem 2rem;
+            background: linear-gradient(120deg, #1E90FF, #87CEEB);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .about::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .about h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about button {
+            padding: 0.8rem 2rem;
+            background-color: white;
+            color: #1E90FF;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .about button:hover {
+            background-color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Founders Section Styling */
+        .founders {
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            background: #f9f9f9;
+        }
+
+        .founder {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .founder:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .founder img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .founder h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .founder p {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo"><img src="./images/Screenshot 2025-01-23 093557.png" class="logo1" alt="logo"></div>
+    <div class="menu">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./index.html">Publication</a>
+        <a href="./index.html">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+</nav>
+
+<!-- About Section -->
+<section class="about">
+    <h2>About Us</h2>
+    <p>
+        Welcome to our organization! We are dedicated to creating positive change in our communities through impactful initiatives.
+        Our mission is to bring people together to make a difference and support those in need. With a vision for a brighter and more inclusive future,
+        we strive to empower individuals and transform lives.
+    </p>
+    <button>Learn More About Us</button>
+</section>
+
+<!-- Founders Section -->
+<section class="founders">
+    <div class="founder">
+        <img src="./images/frg founder.jpg" alt="Founder 1">
+        <h3>Angonimi David-Imeh</h3>
+        <p>Angonimi David-Imeh is a multi-award-winning entrepreneur, visionary, and humanitarian leader with a strong academic and professional background, including an OND in Accountancy, a B.Sc. in Economics, and an MBA. After nearly a decade with the Bank of Industry's subsidiary, she transitioned into entrepreneurship, focusing on transformative initiatives in education, food supply, and empowerment. 
+         She has significantly impacted underserved communities</p>
+    </div>
+    <div class="founder">
+        <img src="./images/hrgfounder2.png" alt="Founder 2">
+        <h3>Mitchell Okpu</h3>
+        <p>Mitchell is a seasoned business and finance professional with over a decade of experience in the global renewable industry. He holds a degree in Economics and Statistics from the University of Benin, an MBA in Human Resources from Ahmadu Bello University, Zaria, and a Business and Administration certificate from the University of Manitoba, Canada. Currently, he lectures in finance at Providence University, a leading Christian institution in Winnipeg, Canada.</p>
+    </div>
+    <div class="founder">
+        <img src="./images/hrgfounder3.png" alt="Founder 3">
+        <h3>Joyce Daniels</h3>
+        <p>Joyce Daniels, known as the "Queen of Talk," is a renowned Nigerian Event Host MC, Public Speaking Coach, and Thought Leader with over a decade of experience. She has trained over 18,000 individuals in speaking and MCing, authored two books, and is celebrated for shaping the speaking and MC business in Nigeria. As a mindset coach, Joyce empowers individuals to build confidence, resilience, and efficient systems for personal growth. An advocate for inclusive politics in Africa, she is affiliated with WIMBIZ, WISCAR, and WEOG, and reaches over 30,000 readers weekly with her insights.</p>
+    </div>
+    <div class="founder">
+        <img src="./images/hrgfounder4.png" alt="Founder 4">
+        <h3>David Michael</h3>
+        <p>David Michael is a seasoned professional with a strong academic and career background in marketing, business, and telecommunications. A graduate of Geography from the University of Port Harcourt and holder of an MBA in Advertising and Public Relations from Enugu State University, he is an Associate of the Institute of Certified Sales Professionals of Nigeria and a member of the Chartered Institute of Personnel Management. 
+         With extensive experience in Integrated Marketing Communication, David has worked with major telecoms firms like Globacom and MTN Nigeria, where he rose through the ranks to hold pivotal roles such as Customer Acquisition Channel Analyst. He is also the MD/CEO of DN Optionz Services, a company focused on youth education, entertainment, empowerment, and business consultancy. Known for organizing impactful events like the largest children’s Christmas carnival in Southeastern Nigeria and the U-Connect Leadership Summit, David continues to make a difference in business and community development.</p>
+    </div>
+    <div class="founder">
+        <img src="./images/hrgfounder5.png" alt="Founder 5">
+        <h3>Iyobosa Idehen-Sanni</h3>
+        <p>Iyobosa Idehen-Sanni is a versatile and results-driven professional with expertise in HR management, brand marketing, project management, and community building. As the Director of Projects at Hope Raisers Global Foundation, she leads impactful initiatives in education, healthcare, and economic empowerment, aligning with key Sustainable Development Goals. Her extensive experience spans various sectors, showcasing her leadership, strategic thinking, and problem-solving abilities. With a strong academic foundation in Microbiology and certifications in personnel management, Iyobosa consistently delivers successful projects while fostering collaboration and building lasting community relationships.</p>
+    </div>
+    <div class="founder">
+        <img src="./images/hrgfounder6.png" alt="Founder 6">
+        <h3>Tariere Egbegi</h3>
+        <p>Tariere Egbegi, Esq, is a dedicated legal professional with a passion for service and excellence. A graduate of Rivers State University with an LL.B and a master's degree in Oil and Gas Law from Robert Gordon University, Scotland, she was called to the Nigerian Bar in 2003. With extensive leadership experience, she has held roles such as Chairperson of FIDA Nigeria (Bayelsa State), Vice Chair of the NBA Yenagoa Branch, and Coordinator of 100 Women Lobby Group, among others. Currently serving as an Assistant Director in the Ministry of Justice, Yenagoa, her expertise spans legal practice, alternative dispute resolution, and advocacy. Tariere is a team player who enjoys research, reading, and cultural exploration, equipping her to excel in diverse roles.</p>
+    </div>
+    <div class="founder">
+        <img src="./images/hrgfounder7.png" alt="Founder 7">
+        <h3>Dr (Mrs) Olayinka Uadiale</h3>
+        <p>Dr. (Mrs.) Olayinka Uadiale is an experienced academic with over 22 years in higher education, dedicated to fostering student success through innovative teaching methodologies. Her commitment to empowering individuals extends beyond academia, as she actively serves on charity boards, contributing her expertise in teamwork and problem-solving. Passionate about helping others realize their potential, she is a driving force in education and community development. Dr. Uadiale currently serves as the Finance/Budget officer for HRGF.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="./images/Screenshot 2025-01-23 093557.png" alt="Logo">
+            <span>Charity Foundation</span>
+        </div>
+        <p>
+            We are committed to transforming lives and creating a better future through impactful initiatives. Join us in our mission to bring hope and support to those in need.
+        </p>
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2025 Charity Foundation. All Rights Reserved.
+    </div>
+</footer>
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

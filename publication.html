@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Publications</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    .logo1 {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: linear-gradient(90deg, #1E90FF, #87CEEB);
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    nav .menu {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    nav .menu a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    nav .menu a:hover {
+        color: #FFD700;
+    }
+
+    nav .hamburger {
+        display: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+.media-publication {
+    padding: 50px 15px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.media-publication h2 {
+    font-size: 2.5rem;
+    color: #0078d7;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: stretch;
+    padding: 0;
+}
+
+.media-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.media-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.media-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.media-content {
+    padding: 20px;
+}
+
+.media-content h3 {
+    font-size: 1.5rem;
+    color: #0078d7;
+    margin-bottom: 15px;
+}
+
+.media-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.view-more {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #0078d7;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.view-more:hover {
+    background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+    .media-publication {
+        padding: 30px 10px;
+    }
+
+    .media-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .media-content p {
+        font-size: 0.9rem;
+    }
+
+    .view-more {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+    </style>
+</head>
+<body>
+     <!-- Nav Section -->
+     <nav>
+        <div class="logo"><img src="./images/Screenshot 2025-01-23 093557.png" class="logo1" alt="logo"></div>
+        <div class="menu">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./publication.html">Publication</a>
+            <a href="./index.html">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>  
+
+
+    <section class="media-publication">
+        <h2>Media Publications</h2>
+        <div class="media-grid">
+            <div class="media-card">
+                <img src="./images/hrg1.jpg" alt="Media Image 1">
+                <div class="media-content">
+                    <h3>Title of the Media</h3>
+                    <p>Short description of the publication goes here...</p>
+                    <a href="#" class="view-more">View More</a>
+                </div>
+            </div>
+            <div class="media-card">
+                <img src="./images/hrg3.jpg" alt="Media Image 2">
+                <div class="media-content">
+                    <h3>Another Media Title</h3>
+                    <p>Short description of the publication goes here...</p>
+                    <a href="#" class="view-more">View More</a>
+                </div>
+            </div>
+            <div class="media-card">
+                <img src="./images/hrg2.jpg" alt="Media Image 3">
+                <div class="media-content">
+                    <h3>Interesting Title</h3>
+                    <p>Short description of the publication goes here...</p>
+                    <a href="#" class="view-more">View More</a>
+                </div>
+            </div>
+            <div class="media-card">
+                <img src="./images/hrg3.jpg" alt="Media Image 4">
+                <div class="media-content">
+                    <h3>Exciting News</h3>
+                    <p>Short description of the publication goes here...</p>
+                    <a href="#" class="view-more">View More</a>
+                </div>
+            </div>
+            <div class="media-card">
+                <img src="./images/hrg3.jpg" alt="Media Image 4">
+                <div class="media-content">
+                    <h3>Exciting News</h3>
+                    <p>Short description of the publication goes here...</p>
+                    <a href="#" class="view-more">View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./images/Screenshot 2025-01-23 093557.png" alt="Logo">
+                <span>Charity Foundation</span>
+            </div>
+            <p>
+                We are committed to transforming lives and creating a better future through impactful initiatives. Join us in our mission to bring hope and support to those in need.
+            </p>
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Charity Foundation. All Rights Reserved.
+        </div>
+    </footer>
+    
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
