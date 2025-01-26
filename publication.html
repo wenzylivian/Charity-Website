@@ -154,6 +154,26 @@
         padding: 8px 15px;
     }
 }
+@media (max-width: 768px) {
+        nav .menu {
+            display: none;
+            flex-direction: column;
+            background-color: #1E90FF;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            padding: 10px;
+        }
+
+        nav .menu.active {
+            display: flex;
+        }
+
+        nav .hamburger {
+            display: block;
+        }
+    }
     </style>
 </head>
 <body>

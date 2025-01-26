@@ -53,72 +53,106 @@
         }
 
          /* Hero Section */
-         .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            height: 100vh;
-            background: linear-gradient(120deg, #1E90FF, #87CEEB);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        padding: 2rem;
+        background: linear-gradient(90deg, #1E90FF, #87CEEB);
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
 
+    /* Content Wrapper */
+    .content {
+        z-index: 1;
+        max-width: 900px;
+        padding: 1rem;
+    }
+
+    /* Hero Title */
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1.2;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+        animation: fadeInDown 1s ease-in-out;
+    }
+
+    /* Hero Text */
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
+        animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    /* Buttons */
+    .buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .hero button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .primary-btn {
+        background-color: #FFD700;
+        color: #333;
+    }
+
+    .primary-btn:hover {
+        background-color: #ffc107;
+        transform: translateY(-3px);
+    }
+
+    .secondary-btn {
+        background-color: white;
+        color: #2575fc;
+    }
+
+    .secondary-btn:hover {
+        background-color: #f4f4f4;
+        transform: translateY(-3px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 2rem;
             margin-bottom: 1rem;
-            animation: fadeInDown 1s ease-in-out;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-            animation: fadeInUp 1s ease-in-out;
+            font-size: 1rem;
         }
 
-        .hero .buttons {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1rem;
+        .buttons {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
         }
 
         .hero button {
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 300px;
         }
-
-        .hero button:first-child {
-            background-color: #FFD700;
-            color: #333;
-        }
-
-        .hero button:first-child:hover {
-            background-color: #ffae00;
-            transform: translateY(-3px);
-        }
-
-        .hero button:last-child {
-            background-color: white;
-            color: #6a11cb;
-        }
-
-        .hero button:last-child:hover {
-            background-color: #f4f4f4;
-            transform: translateY(-3px);
-        }
+    }
 
         /* Accent Shape */
         .hero::before {
@@ -172,7 +206,7 @@
             nav .menu {
                 display: none;
                 flex-direction: column;
-                background: white;
+                background:#1E90FF;
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -185,7 +219,7 @@
             }
 
             nav .menu a {
-                color: #1E90FF;
+                color: white;
                 padding: 1rem;
                 text-align: center;
                 border-bottom: 1px solid #f1f1f1;
@@ -206,18 +240,22 @@
             <a href="./index.html">Home</a>
             <a href="./about.html">About</a>
             <a href="./gallery.html">Gallery</a>
-            <a href="./index.html">Publication</a>
+            <a href="./publication.html">Publication</a>
             <a href="./index.html">Contact</a>
         </div>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </nav>  
 
     <section class="hero">
-        <h1>Helping Each Other<br> Can Make the World Better</h1>
-        <p>We seek out world changers and difference makers around the globe and equip them to fulfill their unique purpose.</p>
-        <div class="buttons">
-            <button>Donate Now</button>
-            <button>Know About Us</button>
+        <div class="content">
+            <h1>Helping Each Other<br> Can Make the World Better</h1>
+            <p>
+                We seek out world changers and difference makers around the globe and equip them to fulfill their unique purpose.
+            </p>
+            <div class="buttons">
+                <button class="primary-btn">Donate Now</button>
+                <button class="secondary-btn">Know About Us</button>
+            </div>
         </div>
     </section>
 
@@ -340,6 +378,7 @@
         &copy; 2025 Charity Foundation. All Rights Reserved.
     </div>
 </footer>
+
 
 <!-- FontAwesome Icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
