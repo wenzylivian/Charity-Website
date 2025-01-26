@@ -5,45 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HRG-FOUNDATION</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .logo1 {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(90deg, #1E90FF, #87CEEB);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav .menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav .menu a:hover {
+            color: #FFD700;
+        }
+
+        nav .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+         /* Hero Section */
+         .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            height: 100vh;
+            background: linear-gradient(120deg, #1E90FF, #87CEEB);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .hero .buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .hero button {
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero button:first-child {
+            background-color: #FFD700;
+            color: #333;
+        }
+
+        .hero button:first-child:hover {
+            background-color: #ffae00;
+            transform: translateY(-3px);
+        }
+
+        .hero button:last-child {
+            background-color: white;
+            color: #6a11cb;
+        }
+
+        .hero button:last-child:hover {
+            background-color: #f4f4f4;
+            transform: translateY(-3px);
+        }
+
+        /* Accent Shape */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 3s infinite;
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.5;
+            }
+        }
+        @media (max-width: 768px) {
+            nav .menu {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            nav .menu.active {
+                display: flex;
+            }
+
+            nav .menu a {
+                color: #1E90FF;
+                padding: 1rem;
+                text-align: center;
+                border-bottom: 1px solid #f1f1f1;
+            }
+
+            nav .hamburger {
+                display: block;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero">
-          <!-- Hero Section -->
-        <nav class="navbar">
-            <div class="logo">HRG</div>
-            <div class="hamburger" onclick="toggleSidebar()">
-                ☰
-            </div>
-            <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Publication</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Donate</a></li>
-            </ul>
-            <div class="nav-buttons">
-                <button class="contact-btn">Contact Us</button>
-            </div>
-        </nav>
-        <div id="sidebar" class="sidebar">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Publication</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Donate</a></li>
+    <!-- Nav Section -->
+    <nav>
+        <div class="logo"><img src="./images/Screenshot 2025-01-23 093557.png" class="logo1" alt="logo"></div>
+        <div class="menu">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./index.html">Publication</a>
+            <a href="./index.html">Contact</a>
         </div>
-        <div class="hero-content">
-            <h2>Give Hope For Homeless</h2>
-            <h1>Helping Each Other <br> Can Make World Better</h1>
-            <p>We seek out world changers and difference makers around the globe and equip them to fulfill their unique purpose.</p>
-            <div class="hero-buttons">
-                <button class="donate-btn">Donate Now</button>
-                <button class="about-btn">Know About Us</button>
-            </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>  
+
+    <section class="hero">
+        <h1>Helping Each Other<br> Can Make the World Better</h1>
+        <p>We seek out world changers and difference makers around the globe and equip them to fulfill their unique purpose.</p>
+        <div class="buttons">
+            <button>Donate Now</button>
+            <button>Know About Us</button>
         </div>
-    </div>
+    </section>
 
    <!-- About Us Section -->
     <div class="about-section">
@@ -138,54 +314,44 @@
     </div>
 </section>
 
-<!-- Footer Section -->
 <footer>
-    <div class="footer-top">
-        <div class="partners">
-            <img src="logos/logo1.png" alt="Logotype">
-            <img src="logos/logo2.png" alt="Renew Toxicology">
-            <img src="logos/logo3.png" alt="Globe International">
-            <img src="logos/logo4.png" alt="Action for Charity">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="./images/Screenshot 2025-01-23 093557.png" alt="Logo">
+            <span>Charity Foundation</span>
         </div>
-    </div>
-
-    <div class="footer-main">
-        <div class="footer-brand">
-            <h3>Give Life</h3>
-            <p>10k Worldwide Clients Already Connected!</p>
-        </div>
-
+        <p>
+            We are committed to transforming lives and creating a better future through impactful initiatives. Join us in our mission to bring hope and support to those in need.
+        </p>
         <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog Post</a></li>
-                <li><a href="#">Photo Gallery</a></li>
-            </ul>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
-
-        <div class="footer-contact">
-            <h4>Get in Touch</h4>
-            <address>
-                2464 Royal Ln. Mesa, New Jersey 45463
-            </address>
-        </div>
-
-        <div class="footer-newsletter">
-            <h4>Newsletter</h4>
-            <input type="email" placeholder="Enter Your Email">
-            <button>Subscribe</button>
+        <div class="social-icons">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <p>Designed by TeamGive | Developed by CodeCrafters</p>
+    <div class="copyright">
+        &copy; 2025 Charity Foundation. All Rights Reserved.
     </div>
 </footer>
 
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
     <script src="./script.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
     
 </body>
 </html>

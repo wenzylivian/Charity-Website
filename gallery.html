@@ -6,167 +6,268 @@
     <title>Our Gallery</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Light background for elegance */
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Gallery Section */
-.gallery-section {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Title Styling */
-.gallery-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    margin-top: 55px;
-    color: #003366; /* Classic royal blue color */
-    font-family: 'Georgia', serif; /* Classic font */
-    text-transform: capitalize;
-    letter-spacing: 1px;
-}
-
-/* Gallery Grid */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
-    gap: 15px; /* Spacing between items */
-    padding: 20px;
-}
-
-/* Gallery Item Styling */
-.gallery-item {
-    background-color: #e0e0e0; /* Light gray background */
-    border-radius: 15px; /* Rounded corners for a softer look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    height: 150px; /* Uniform height */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-/* Add subtle gradient for more appeal */
-.gallery-item::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #f8f9fa, #dfe6e9);
-    mix-blend-mode: overlay;
-}
-
-/* Hover Effect */
-.gallery-item:hover {
-    transform: scale(1.08); /* Larger zoom */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow */
-    background-color: #ffffff; /* Pure white for hover */
-}
-.gallery-item {
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    height: 150px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.gallery-item {
-    width: 100%; /* Matches the grid's auto-sizing */
-    background-size: cover; /* Ensures the image fills the space */
-    background-position: center; /* Centers the image */
-}
-.gallery-item {
-    background-image: url('./images/hrg2.jpg');
-}
-
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .gallery-title {
-        font-size: 2rem; /* Smaller title size for mobile */
-        margin-bottom: 20px;
+.logo1 {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: linear-gradient(90deg, #1E90FF, #87CEEB);
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller columns */
-        gap: 10px; /* Reduce spacing for compact view */
+    nav .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        letter-spacing: 2px;
     }
 
-    .gallery-item {
-        height: 120px; /* Adjust item height for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-title {
-        font-size: 1.8rem; /* Further reduce title size */
+    nav .menu {
+        display: flex;
+        gap: 1.5rem;
     }
 
-    .gallery {
-        padding: 10px; /* Reduce padding for very small screens */
+    nav .menu a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        transition: color 0.3s;
     }
 
-    .gallery-item {
-        height: 100px; /* Further reduce height */
-        border-radius: 10px; /* Slightly sharper corners for compactness */
+    nav .menu a:hover {
+        color: #FFD700;
     }
-}
+
+    nav .hamburger {
+        display: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+     /* Gallery Section */
+     .gallery-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .gallery-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .gallery-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 0 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(80%);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        .gallery-item span {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover span {
+            opacity: 1;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
 
 
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">HRG</div>
-        <div class="hamburger" onclick="toggleSidebar()">
-            ☰
+    <!-- Nav Section -->
+    <nav>
+        <div class="logo"><img src="./images/Screenshot 2025-01-23 093557.png" class="logo1" alt="logo"></div>
+        <div class="menu">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./publication.html">Publication</a>
+            <a href="./index.html">Contact</a>
         </div>
-        <ul class="nav-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Publication</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Donate</a></li>
-        </ul>
-        <div class="nav-buttons">
-            <button class="contact-btn">Contact Us</button>
-        </div>
-    </nav>
-    <div id="sidebar" class="sidebar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Publication</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Donate</a></li>
-    </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav> 
+
     <section class="gallery-section">
-        <h2 class="gallery-title">Our Gallery</h2>
-        <div class="gallery">
-            <div class="gallery-item item1"></div>
-            <div class="gallery-item item2"></div>
-            <div class="gallery-item item3"></div>
-            <div class="gallery-item item4"></div>
-            <div class="gallery-item item5"></div>
-            <div class="gallery-item item6"></div>
-            <div class="gallery-item item7"></div>
-            <div class="gallery-item item8"></div>
-            <div class="gallery-item item9"></div>
-            <div class="gallery-item item10"></div>
-            <div class="gallery-item item11"></div>
-            <div class="gallery-item item12"></div>
+        <h2>Our Gallery</h2>
+        <p>Explore our beautiful collection of moments and memories.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrg1.jpg" alt="Gallery Image 1">
+                <span>Image Title 1</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrg2.jpg" alt="Gallery Image 2">
+                <span>Image Title 2</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrg3.jpg" alt="Gallery Image 3">
+                <span>Image Title 3</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrg2.jpg" alt="Gallery Image 4">
+                <span>Image Title 4</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrg1.jpg" alt="Gallery Image 5">
+                <span>Image Title 5</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrg3.jpg" alt="Gallery Image 6">
+                <span>Image Title 6</span>
+            </div>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./images/Screenshot 2025-01-23 093557.png" alt="Logo">
+                <span>Charity Foundation</span>
+            </div>
+            <p>
+                We are committed to transforming lives and creating a better future through impactful initiatives. Join us in our mission to bring hope and support to those in need.
+            </p>
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Charity Foundation. All Rights Reserved.
+        </div>
+    </footer>
+    
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <div class="lightbox" id="lightbox">
+        <button class="close" onclick="closeLightbox()">×</button>
+        <img src="" alt="Lightbox Image">
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        function openLightbox(item) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = lightbox.querySelector('img');
+            const img = item.querySelector('img').src;
+            lightboxImage.src = img;
+            lightbox.style.display = 'flex';
+        }
+    
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+
+    
+
+    <script src="./script.js"></script>
 </body>
 </html>
