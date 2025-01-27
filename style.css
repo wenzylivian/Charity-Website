@@ -60,7 +60,7 @@ body {
     content: '';
     width: 80px;
     height: 3px;
-    background-color: #3498db; /* Accent color */
+    background-color: red; /* Accent color */
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -68,7 +68,7 @@ body {
 
 .about-text h3 {
     font-size: 1.8rem;
-    color: #2980b9; /* Subheading with subtle contrast */
+    color: red; /* Subheading with subtle contrast */
     margin-bottom: 1rem;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .read-more-btn {
-    background-color: #3498db; /* Accent color */
+    background-color: red; /* Accent color */
     color: #fff;
     padding: 0.8rem 1.5rem;
     border: none;
@@ -91,7 +91,8 @@ body {
 }
 
 .read-more-btn:hover {
-    background-color: #2980b9; /* Darker hover effect */
+    background-color: white; /* Darker hover effect */
+    color: gray;
     transform: translateY(-3px); /* Slight lift on hover */
 }
 
@@ -106,8 +107,8 @@ body {
 }
 
 .mission-section h2 {
-    font-size: 2.8rem;
-    color: #3498db; /* Accent color */
+    font-size: 2.0rem;
+    color: red; /* Accent color */
     margin-bottom: 1rem;
 }
 
@@ -225,7 +226,7 @@ img {
 
 .mission-section .col h4 {
     font-size: 1.6rem;
-    color: #2980b9;
+    color: red;
     margin-bottom: 1rem;
 }
 
@@ -261,7 +262,7 @@ img {
 
 .progress-fill {
     height: 10px;
-    background: #3498db; /* Accent color */
+    background: red; /* Accent color */
     border-radius: 10px;
     transition: width 0.6s ease;
 }
@@ -315,11 +316,9 @@ h3, h4 {
     padding: 60px 20px;
     text-align: center;
     background-color: #fff;
-    border-top: 5px solid royalblue;
-    border-bottom: 5px solid royalblue;
 }
 .fun-facts h3 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 30px;
     color: #1a1a50;
 }
@@ -336,11 +335,11 @@ h3, h4 {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     margin: 15px;
     text-align: center;
-    border: 2px solid royalblue;
+    border: 2px solid red;
 }
 .facts-container .fact-item h4 {
-    font-size: 2.2rem;
-    color: royalblue;
+    font-size: 2.0rem;
+    color: red;
     margin-bottom: 10px;
 }
 .facts-container .fact-item p {
@@ -369,8 +368,8 @@ h3, h4 {
 }
 
 footer {
-    background: linear-gradient(90deg, #1E90FF, #87CEEB);
-    color: white;
+    background: white;
+    color: gray;
     padding: 3rem 2rem;
     position: relative;
     text-align: center;
@@ -411,7 +410,7 @@ footer .footer-links {
 }
 
 footer .footer-links a {
-    color: white;
+    color: gray;
     font-size: 1rem;
     text-decoration: none;
     font-weight: 600;
@@ -419,7 +418,7 @@ footer .footer-links a {
 }
 
 footer .footer-links a:hover {
-    color: #fff;
+    color: red;
 }
 
 footer .social-icons {
@@ -427,25 +426,6 @@ footer .social-icons {
     gap: 1rem;
 }
 
-footer .social-icons a {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    color: #0047AB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-footer .social-icons a:hover {
-    background-color: #fff;
-    color: #0056D2;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
 
 footer .copyright {
     font-size: 0.9rem;

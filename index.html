@@ -16,7 +16,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background: linear-gradient(90deg, #1E90FF, #87CEEB);
+            background-color: white;
             color: white;
             position: sticky;
             top: 0;
@@ -37,19 +37,20 @@
 
         nav .menu a {
             text-decoration: none;
-            color: white;
+            color: gray;
             font-size: 1rem;
             transition: color 0.3s;
         }
 
         nav .menu a:hover {
-            color: #FFD700;
+            color: red;
         }
 
         nav .hamburger {
             display: none;
             font-size: 1.8rem;
             cursor: pointer;
+            color: gray;
         }
 
          /* Hero Section */
@@ -60,11 +61,22 @@
         text-align: center;
         height: 100vh;
         padding: 2rem;
-        background: linear-gradient(90deg, #1E90FF, #87CEEB);
+        
+        background-image: url('');
         color: white;
         position: relative;
         overflow: hidden;
     }
+    .hero {
+    background: linear-gradient(
+        rgba(247, 29, 29, 0.7), /* Top color */
+        rgba(255, 0, 0, 0.5) 
+    ), 
+    url('./images/hrg3.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
 
     /* Content Wrapper */
     .content {
@@ -112,13 +124,14 @@
     }
 
     .primary-btn {
-        background-color: #FFD700;
+        background-color: white;
         color: #333;
     }
 
     .primary-btn:hover {
-        background-color: #ffc107;
+        background-color: red;
         transform: translateY(-3px);
+        color: white;
     }
 
     .secondary-btn {
@@ -206,7 +219,7 @@
             nav .menu {
                 display: none;
                 flex-direction: column;
-                background:#1E90FF;
+                background:reD;
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -248,13 +261,12 @@
 
     <section class="hero">
         <div class="content">
-            <h1>Hope Global foundation Helping Each Other<br> Can Make the World Better</h1>
+            <h1>Christmas with hope 2024.1850 households,50 household per State,100k per household.</h1>
             <p>
-                We seek out world changers and difference makers around the globe and equip them to fulfill their unique purpose.
+             Project Feed a Household This Christmas, Put a Smile on Their Faces
             </p>
             <div class="buttons">
                 <button class="primary-btn">Donate Now</button>
-                <button class="secondary-btn">Know About Us</button>
             </div>
         </div>
     </section>
@@ -264,10 +276,10 @@
         <div class="about-container">
             <!-- About Text -->
             <div class="about-text">
-                <h2>About Us</h2>
+                <h2>Who we are</h2>
                 <h3>Your Support Is Really Powerful</h3>
-                <p>The secret to happiness lies in helping others. Never underestimate the difference you can make in the lives of the poor, the abused, and the helpless.</p>
-                <a href="#" class="read-more-btn">Read More</a>
+                <p>HOPE Raiser Global Foundation is a nonprofit committed to bringing hope and lasting change to communities in need. Guided by compassion and empowerment, we support individuals and families through education, healthcare, poverty relief, and empowerment programs, creating pathways to a brighter future.</p>
+                <a href="./about.html" class="read-more-btn">Read More</a>
             </div>
 
             <!-- About Images -->
@@ -283,11 +295,10 @@
     <!-- Mission Section -->
 <section class="mission-section">
     <div class="container">
-        <h2>Welcome to Charity</h2>
+        <h2>Welcome to Hope Raisers Global foundation</h2>
         <h3>Let Us Come Together to Make a Difference</h3>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut 
-            labore et dolore magna aliqua.
+            Our mission is to uplift the underserved, ensuring everyone has the chance to thrive, regardless of their background. With a passionate network of volunteers, donors, and partners, we are a movement for sustainable change. Join us as we work to raise hope and build an inclusive, hopeful future for all.
         </p>
         <div class="row">
             <div class="col">
@@ -342,11 +353,11 @@
             <p>Volunteers</p>
         </div>
         <div class="fact-item">
-            <h4>10M+</h4>
+            <h4>10k+</h4>
             <p>Poor People Saved</p>
         </div>
         <div class="fact-item">
-            <h4>100+</h4>
+            <h4>10+</h4>
             <p>Country Members</p>
         </div>
     </div>
@@ -356,7 +367,7 @@
     <div class="footer-content">
         <div class="footer-logo">
             <img src="./images/Screenshot 2025-01-23 093557.png" alt="Logo">
-            <span>Charity Foundation</span>
+            <span>HRG Foundation</span>
         </div>
         <p>
             We are committed to transforming lives and creating a better future through impactful initiatives. Join us in our mission to bring hope and support to those in need.
@@ -367,22 +378,11 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
-        <div class="social-icons">
-            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
     </div>
     <div class="copyright">
         &copy; 2025 Charity Foundation. All Rights Reserved.
     </div>
 </footer>
-
-
-<!-- FontAwesome Icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
 
     <script src="./script.js"></script>
     <script>
