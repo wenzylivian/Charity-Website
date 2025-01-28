@@ -60,7 +60,7 @@ body {
     content: '';
     width: 80px;
     height: 3px;
-    background-color: red; /* Accent color */
+    background-color: #d4af37; /* Accent color */
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -68,7 +68,7 @@ body {
 
 .about-text h3 {
     font-size: 1.8rem;
-    color: red; /* Subheading with subtle contrast */
+    color: #d4af37; /* Subheading with subtle contrast */
     margin-bottom: 1rem;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .read-more-btn {
-    background-color: red; /* Accent color */
+    background-color: #d4af37; /* Accent color */
     color: #fff;
     padding: 0.8rem 1.5rem;
     border: none;
@@ -108,7 +108,7 @@ body {
 
 .mission-section h2 {
     font-size: 2.0rem;
-    color: red; /* Accent color */
+    color: #d4af37; /* Accent color */
     margin-bottom: 1rem;
 }
 
@@ -226,7 +226,7 @@ img {
 
 .mission-section .col h4 {
     font-size: 1.6rem;
-    color: red;
+    color: #d4af37;
     margin-bottom: 1rem;
 }
 
@@ -262,7 +262,7 @@ img {
 
 .progress-fill {
     height: 10px;
-    background: red; /* Accent color */
+    background: #d4af37; /* Accent color */
     border-radius: 10px;
     transition: width 0.6s ease;
 }
@@ -335,11 +335,11 @@ h3, h4 {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     margin: 15px;
     text-align: center;
-    border: 2px solid red;
+    border: 2px solid #d4af37;
 }
 .facts-container .fact-item h4 {
     font-size: 2.0rem;
-    color: red;
+    color: #d4af37;
     margin-bottom: 10px;
 }
 .facts-container .fact-item p {
@@ -418,7 +418,7 @@ footer .footer-links a {
 }
 
 footer .footer-links a:hover {
-    color: red;
+    color: #d4af37;
 }
 
 footer .social-icons {

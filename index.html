@@ -16,8 +16,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background-color: white;
-            color: white;
+            background: linear-gradient(90deg, #4b0082, #d4af37);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -37,20 +37,21 @@
 
         nav .menu a {
             text-decoration: none;
-            color: gray;
+            color: white;
             font-size: 1rem;
             transition: color 0.3s;
         }
 
         nav .menu a:hover {
-            color: red;
+            color: #f0e68c; /* Lighter gold for hover */
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         nav .hamburger {
             display: none;
             font-size: 1.8rem;
             cursor: pointer;
-            color: gray;
+            color: white;
         }
 
          /* Hero Section */
@@ -61,23 +62,21 @@
         text-align: center;
         height: 100vh;
         padding: 2rem;
-        
-        background-image: url('');
+        background-image: url('./images/hrg3.jpg');
         color: white;
         position: relative;
         overflow: hidden;
-    }
-    .hero {
-    background: linear-gradient(
-        rgba(247, 29, 29, 0.7), /* Top color */
-        rgba(255, 0, 0, 0.5) 
+        background: linear-gradient(
+        rgba(75, 0, 130, 0.8),  
+        rgba(212, 175, 55, 0.6) 
     ), 
-    url('./images/hrg3.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-}
-
+    url('./images/hrg3.jpg');      
+    background-size: cover;     
+    background-position: center; 
+    color: white;              
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    }
+    
     /* Content Wrapper */
     .content {
         z-index: 1;
@@ -129,7 +128,7 @@
     }
 
     .primary-btn:hover {
-        background-color: red;
+        background-color: yellow;
         transform: translateY(-3px);
         color: white;
     }
@@ -219,7 +218,7 @@
             nav .menu {
                 display: none;
                 flex-direction: column;
-                background:reD;
+                background: #d4af37;
                 position: absolute;
                 top: 100%;
                 left: 0;
