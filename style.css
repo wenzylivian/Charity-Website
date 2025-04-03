@@ -459,3 +459,55 @@ footer .copyright {
     }
 }
 
+.sponsors {
+    margin-top: 30px;
+    width: 100%;
+}
+.sponsors h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+.sponsors h3::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: red;
+    display: block;
+    margin: 5px auto;
+}
+.carousel-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel img {
+    width: 150px;
+    height: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin: 0 10px;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}

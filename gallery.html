@@ -181,10 +181,22 @@
         nav .hamburger {
             display: block;
         }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 0 2rem;
+        }
+
+        /* Ensure 3 images per row on mobile */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
     }
-
-
-
     </style>
 </head>
 <body>
@@ -203,33 +215,294 @@
     </nav> 
 
     <section class="gallery-section">
-        <h2>Our Gallery</h2>
-        <p>Explore our beautiful collection of moments and memories.</p>
+        <h2>Gallery</h2>
+        <p>Images From All Projects</p>
         <div class="gallery-grid">
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="./images/hrg1.jpg" alt="Gallery Image 1">
+                <img src="./images/hrgf gallery/ggg67.jpg" alt="Gallery Image 1">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg68.jpg" alt="Gallery Image 1">
                 <span>Image Title 1</span>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="./images/hrg2.jpg" alt="Gallery Image 2">
-                <span>Image Title 2</span>
+                <img src="./images/hrgf gallery/ggg69.jpg" alt="Gallery Image 1">
+                <span>Image Title 1</span>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="./images/hrg3.jpg" alt="Gallery Image 3">
-                <span>Image Title 3</span>
+                <img src="./images/hrgf gallery/ggg70.jpg" alt="Gallery Image 1">
+                <span>Image Title 1</span>
+            </div>
+            
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg1.jpg" alt="Gallery Image 1">
+                <span>An outreach for the indigent women at Nnewi market</span>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="./images/hrg2.jpg" alt="Gallery Image 4">
-                <span>Image Title 4</span>
+                <img src="./images/hrgf gallery/ggg2.jpg" alt="Gallery Image 2">
+                <span>An outreach for the indigent women at Nnewi market</span>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="./images/hrg1.jpg" alt="Gallery Image 5">
-                <span>Image Title 5</span>
+                <img src="./images/hrgf gallery/ggg3.jpg" alt="Gallery Image 3">
+                <span>An outreach for the indigent women at Nnewi market</span>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-                <img src="./images/hrg3.jpg" alt="Gallery Image 6">
-                <span>Image Title 6</span>
+                <img src="./images/hrgf gallery/ggg4.jpg" alt="Gallery Image 4">
+                <span>An outreach for the indigent women at Nnewi market</span>
             </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg5.jpg" alt="Gallery Image 5">
+                <span>An outreach for the indigent women at Nnewi market</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg6.jpg" alt="Gallery Image 6">
+                <span>An outreach for the indigent women at Nnewi market</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg7.jpg" alt="Gallery Image 7">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg8.jpg" alt="Gallery Image 8">
+                <span>An outreach for the indigent women at Nnewi market</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg9.jpg" alt="Gallery Image 9">
+                <span>An outreach for the indigent women at Nnewi market</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg10.jpg" alt="Gallery Image 10">
+                <span>An outreach for the indigent women at Nnewi market</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg11.jpg" alt="Gallery Image 11">
+                <span>An outreach for the indigent women at Nnewi market</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg12.jpg" alt="Gallery Image 12">
+                <span>In 2016, over 1,000 girls at Ikenegbu Girls Secondary School got pads</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg13.jpg" alt="Gallery Image 13">
+                <span>In 2016, over 1,000 girls at Ikenegbu Girls Secondary School got pads</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg14.jpg" alt="Gallery Image 14">
+                <span>In 2016, over 1,000 girls at Ikenegbu Girls Secondary School got pads</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg15.jpg" alt="Gallery Image 15">
+                <span>Weekly teachings of the IDP Children  Feb-Aug 2022</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg16.jpg" alt="Gallery Image 16">
+                <span>Weekly teachings of the IDP Children  Feb-Aug 2022</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg17.jpg" alt="Gallery Image 17">
+                <span>Weekly teachings of the IDP Children  Feb-Aug 2022</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg18.jpg" alt="Gallery Image 18">
+                <span>Weekly teachings of the IDP Children  Feb-Aug 2022</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg19.jpg" alt="Gallery Image 19">
+                <span>Weekly teachings of the IDP Children  Feb-Aug 2022</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg20.jpg" alt="Gallery Image 20">
+                <span>Weekly teachings of the IDP Children  Feb-Aug 2022</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg21.jpg" alt="Gallery Image 1">
+                <span>Weekly teachings of the IDP Children  Feb-Aug 2022</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg22.jpg" alt="Gallery Image 2">
+                <span>Weekly teachings of the IDP Children  Feb-Aug 2022</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg23.jpg" alt="Gallery Image 3">
+                <span>Weekly teachings of the IDP Children  Feb-Aug 2022</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg24.jpg" alt="Gallery Image 4">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg25.jpg" alt="Gallery Image 5">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg26.jpg" alt="Gallery Image 6">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg27.jpg" alt="Gallery Image 7">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg28.jpg" alt="Gallery Image 8">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg29.jpg" alt="Gallery Image 9">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg30.jpg" alt="Gallery Image 10">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg31.jpg" alt="Gallery Image 11">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg32.jpg" alt="Gallery Image 12">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg33.jpg" alt="Gallery Image 13">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg34.jpg" alt="Gallery Image 14">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg35.jpg" alt="Gallery Image 15">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg36.jpg" alt="Gallery Image 16">
+                <span></span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg37.jpg" alt="Gallery Image 17">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg38.jpg" alt="Gallery Image 18">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg39.jpg" alt="Gallery Image 19">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg40.jpg" alt="Gallery Image 20">
+                <span>Image Title 20</span<span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg41.jpg" alt="Gallery Image 1">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg42.jpg" alt="Gallery Image 2">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg43.jpg" alt="Gallery Image 3">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg44.jpg" alt="Gallery Image 4">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg45.jpg" alt="Gallery Image 5">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg46.jpg" alt="Gallery Image 6">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg47.jpg" alt="Gallery Image 7">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg48.jpg" alt="Gallery Image 8">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg49.jpg" alt="Gallery Image 9">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg50.jpg" alt="Gallery Image 10">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg51.jpg" alt="Gallery Image 11">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg52.jpg" alt="Gallery Image 12">
+                <span>Image Title 12</span<span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg53.jpg" alt="Gallery Image 13">
+                <span>Image Title 13</span<span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg54.jpg" alt="Gallery Image 14">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg55.jpg" alt="Gallery Image 15">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg56.jpg" alt="Gallery Image 16">
+                <span>Children’s Day May 27, 2023: Providing School Sandals to Internally Displaced Children</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg57.jpg" alt="Gallery Image 17">
+                <span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg58.jpg" alt="Gallery Image 18">
+                <span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg59.jpg" alt="Gallery Image 19">
+                <span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg60.jpg" alt="Gallery Image 20">
+                <span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg61.jpg" alt="Gallery Image 20">
+                <span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg62.jpg" alt="Gallery Image 20">
+                <span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg63.jpg" alt="Gallery Image 20">
+                <span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg64.jpg" alt="Gallery Image 20">
+                <span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg65.jpg" alt="Gallery Image 20">
+                <span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./images/hrgf gallery/ggg66.jpg" alt="Gallery Image 20">
+                <span>Image Title 20</span<span> Project ‘Feed and Warm’ Provides Tea to Children During Cold Season Aug 2022.</span>
+            </div>
+
+            <!-- Continued up to ggg66.jpg -->
+            
+            
         </div>
     </section>
 
@@ -237,26 +510,39 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="./images/Screenshot 2025-01-23 093557.png" alt="Logo">
-                <span>Charity Foundation</span>
-            </div>
-            <p>
-                We are committed to transforming lives and creating a better future through impactful initiatives. Join us in our mission to bring hope and support to those in need.
-            </p>
-            <div class="footer-links">
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="social-icons">
-                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <span>HRG Foundation</span>
             </div>
         </div>
+
+        <div class="sponsors">
+            <h3>Partners</h3>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel" id="carousel">
+                    <img src="./images/hrg logos/imgg1.jpeg" alt="Sponsor 1">
+                    <img src="./images/hrg logos/imgg10.jpeg" alt="Sponsor 2">
+                    <img src="./images/hrg logos/imgg11.jpeg" alt="Sponsor 3">
+                    <img src="./images/hrg logos/imgg12.jpeg" alt="Sponsor 4">
+                    <img src="./images/hrg logos/imgg13.jpeg" alt="Sponsor 5">
+                    <img src="./images/hrg logos/imgg14.jpeg" alt="Sponsor 6">
+                    <img src="./images/hrg logos/imgg15.jpeg" alt="Sponsor 7">
+                    <img src="./images/hrg logos/imgg16.jpeg" alt="Sponsor 8">
+                    <img src="./images/hrg logos/imgg17.jpg" alt="Sponsor 9">
+                    <img src="./images/hrg logos/imgg2.jpeg" alt="Sponsor 15">
+                    <img src="./images/hrg logos/imgg23.jpeg" alt="Sponsor 16">
+                    <img src="./images/hrg logos/imgg4.jpeg" alt="Sponsor 17">
+                    <img src="./images/hrg logos/imgg5.jpeg" alt="Sponsor 18">
+                    <img src="./images/hrg logos/imgg6.jpeg" alt="Sponsor 19">
+                    <img src="./images/hrg logos/imgg7.jpeg" alt="Sponsor 20">
+                    <img src="./images/hrg logos/imgg8.jpeg" alt="Sponsor 21">
+                    <img src="./images/hrg logos/imgg9.jpeg" alt="Sponsor 22">
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
         <div class="copyright">
-            &copy; 2025 Charity Foundation. All Rights Reserved.
+            &copy; 2025 HRG Foundation. All Rights Reserved.
         </div>
     </footer>
     
