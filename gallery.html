@@ -12,46 +12,7 @@
         height: 45px;
         border-radius: 50%;
     }
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        background:linear-gradient(90deg, #4b0082, #d4af37);;
-        color: white;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    nav .logo {
-        font-size: 1.8rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-    }
-
-    nav .menu {
-        display: flex;
-        gap: 1.5rem;
-    }
-
-    nav .menu a {
-        text-decoration: none;
-        color: white;
-        font-size: 1rem;
-        transition: color 0.3s;
-    }
-
-    nav .menu a:hover {
-        color: #FFD700;
-    }
-
-    nav .hamburger {
-        display: none;
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
+   
 
      /* Gallery Section */
      .gallery-section {
@@ -163,24 +124,6 @@
         }
         /* Responsive Styling for Mobile */
     @media (max-width: 768px) {
-        nav .menu {
-            display: none;
-            flex-direction: column;
-            background-color: #1E90FF;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            left: 0;
-            padding: 10px;
-        }
-
-        nav .menu.active {
-            display: flex;
-        }
-
-        nav .hamburger {
-            display: block;
-        }
 
         .gallery-grid {
             display: grid;
@@ -209,10 +152,10 @@
             <a href="./gallery.html">Gallery</a>
             <a href="./publication.html">Publication</a>
             <a href="./christmas-with-hope.html">Christmas with hope</a>
-            <a href="./index.html">Contact</a>
+           
         </div>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    </nav> 
+    </nav>  
 
     <section class="gallery-section">
         <h2>Gallery</h2>
@@ -555,11 +498,7 @@
     </div>
     
     <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('active');
-        }
-
+       
         function openLightbox(item) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImage = lightbox.querySelector('img');
@@ -573,8 +512,6 @@
             lightbox.style.display = 'none';
         }
     </script>
-
-    
 
     <script src="./script.js"></script>
 </body>

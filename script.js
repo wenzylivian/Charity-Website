@@ -3,6 +3,7 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
+
   let index = 0;
 function moveSlide(step) {
     const carousel = document.getElementById('carousel');

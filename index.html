@@ -11,48 +11,7 @@
             height: 45px;
             border-radius: 50%;
         }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: linear-gradient(90deg, #4b0082, #d4af37);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        nav .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        nav .menu {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        nav .menu a {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        nav .menu a:hover {
-            color: #f0e68c; /* Lighter gold for hover */
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        }
-
-        nav .hamburger {
-            display: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: white;
-        }
+       
 
          /* Hero Section */
     .hero {
@@ -214,33 +173,7 @@
                 opacity: 0.5;
             }
         }
-        @media (max-width: 768px) {
-            nav .menu {
-                display: none;
-                flex-direction: column;
-                background: #d4af37;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
-
-            nav .menu.active {
-                display: flex;
-            }
-
-            nav .menu a {
-                color: white;
-                padding: 1rem;
-                text-align: center;
-                border-bottom: 1px solid #f1f1f1;
-            }
-
-            nav .hamburger {
-                display: block;
-            }
-        }
+       
 
         
 
@@ -262,7 +195,7 @@
             <a href="./gallery.html">Gallery</a>
             <a href="./publication.html">Publication</a>
             <a href="./christmas-with-hope.html">Christmas with hope</a>
-            <a href="./index.html">Contact</a>
+        
         </div>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </nav>  

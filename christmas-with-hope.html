@@ -19,46 +19,7 @@
         height: 45px;
         border-radius: 50%;
     }
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        background: linear-gradient(90deg, #4b0082, #d4af37);
-        color: white;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    nav .logo {
-        font-size: 1.8rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-    }
-
-    nav .menu {
-        display: flex;
-        gap: 1.5rem;
-    }
-
-    nav .menu a {
-        text-decoration: none;
-        color: white;
-        font-size: 1rem;
-        transition: color 0.3s;
-    }
-
-    nav .menu a:hover {
-        color: #FFD700;
-    }
-
-    nav .hamburger {
-        display: none;
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
+  
         .container {
             width: 80%;
             max-width: 1200px;
@@ -136,26 +97,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        @media (max-width: 768px) {
-        nav .menu {
-            display: none;
-            flex-direction: column;
-            background: linear-gradient(90deg, #4b0082, #d4af37);
-            position: absolute;
-            top: 100%;
-            right: 0;
-            left: 0;
-            padding: 10px;
-        }
-
-        nav .menu.active {
-            display: flex;
-        }
-
-        nav .hamburger {
-            display: block;
-        }
-    }
+       
     </style>
 </head>
 <body>
@@ -169,7 +111,7 @@
             <a href="./gallery.html">Gallery</a>
             <a href="./publication.html">Publication</a>
             <a href="./christmas-with-hope.html">Christmas with hope</a>
-            <a href="./index.html">Contact</a>
+           
         </div>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </nav>  
@@ -206,35 +148,43 @@
             <div class="footer-logo">
                 <img src="./images/Screenshot 2025-01-23 093557.png" alt="Logo">
                 <span>hrgfoundation</span>
-            </div>
-            <p>
-                We are committed to transforming lives and creating a better future through impactful initiatives. Join us in our mission to bring hope and support to those in need.
-            </p>
-            <div class="footer-links">
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="social-icons">
-                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>  
+        </div>
+
+        <div class="sponsors">
+            <h3>Partners</h3>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel" id="carousel">
+                    <img src="./images/hrg logos/imgg1.jpeg" alt="Sponsor 1">
+                    <img src="./images/hrg logos/imgg10.jpeg" alt="Sponsor 2">
+                    <img src="./images/hrg logos/imgg11.jpeg" alt="Sponsor 3">
+                    <img src="./images/hrg logos/imgg12.jpeg" alt="Sponsor 4">
+                    <img src="./images/hrg logos/imgg13.jpeg" alt="Sponsor 5">
+                    <img src="./images/hrg logos/imgg14.jpeg" alt="Sponsor 6">
+                    <img src="./images/hrg logos/imgg15.jpeg" alt="Sponsor 7">
+                    <img src="./images/hrg logos/imgg16.jpeg" alt="Sponsor 8">
+                    <img src="./images/hrg logos/imgg17.jpg" alt="Sponsor 9">
+                    <img src="./images/hrg logos/imgg2.jpeg" alt="Sponsor 15">
+                    <img src="./images/hrg logos/imgg23.jpeg" alt="Sponsor 16">
+                    <img src="./images/hrg logos/imgg4.jpeg" alt="Sponsor 17">
+                    <img src="./images/hrg logos/imgg5.jpeg" alt="Sponsor 18">
+                    <img src="./images/hrg logos/imgg6.jpeg" alt="Sponsor 19">
+                    <img src="./images/hrg logos/imgg7.jpeg" alt="Sponsor 20">
+                    <img src="./images/hrg logos/imgg8.jpeg" alt="Sponsor 21">
+                    <img src="./images/hrg logos/imgg9.jpeg" alt="Sponsor 22">
+                </div>
+                <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
             </div>
         </div>
+
         <div class="copyright">
-            &copy; 2025 hrgfoundation. All Rights Reserved.
+            &copy; 2025 HRG FOUNDATION. All Rights Reserved.
         </div>
     </footer>
 
 
 
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('active');
-        }
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
