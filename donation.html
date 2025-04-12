@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate Now</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+     
+     
+      
+      overflow: hidden;
+      color: #fff;
+    }
+    .container {
+      background: white;
+      
+      color: #333;
+      width: 95%;
+      max-width: 450px;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+    .now {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .step {
+      display: none;
+      animation: fade 0.5s ease-in-out;
+    }
+    .step.active {
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 0.8rem 1.5rem;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: #219150;
+    }
+    .animated-message {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 1rem;
+      animation: fadeinout 9s infinite;
+      text-align: center;
+    }
+    @keyframes fadeinout {
+      0%, 100% {opacity: 0;}
+      10%, 90% {opacity: 1;}
+    }
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #27ae60;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+    @media(max-width: 600px) {
+      .container {
+        padding: 1.5rem;
+      }
+    }
+
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #4b0082, #d4af37);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav .menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav .menu a:hover {
+    color: #FFD700;
+}
+
+nav .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+img {
+    width: 140px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.logo1 {
+     width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(90deg, #4b0082, #d4af37);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav .menu.active {
+        display: flex;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><img src="./images/Screenshot 2025-01-23 093557.png" class="logo1" alt="logo"></div>
+    <div class="menu">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./publication.html">Publication</a>
+        <a href="./christmas-with-hope.html">Christmas with hope</a>
+        <a href="./donation.html">Donate</a>
+    
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+ </nav>
+
+
+ <div class="animated-message" id="message"></div>
+  <div class="popup" id="popup">Thank you for donating! 💖</div>
+ <div class="now">
+  
+  <div class="container">
+    <!-- Step 1 -->
+    <div class="step active" id="step1">
+      <h2>Choose Donation Amount</h2>
+      <div class="form-group">
+        <select id="amount">
+          <option value="1000">₦1,000</option>
+          <option value="5000">₦5,000</option>
+          <option value="10000">₦10,000</option>
+          <option value="custom">Custom Amount</option>
+        </select>
+      </div>
+      <div class="form-group" id="customAmountField" style="display:none;">
+        <input type="number" id="customAmount" placeholder="Enter Amount" />
+      </div>
+      <button onclick="nextStep(1)">Continue</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step" id="step2">
+      <h2>Your Information</h2>
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Your Email" required>
+      </div>
+      <button onclick="nextStep(2)">Continue</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step" id="step3">
+      <h2>Transfer to this Account</h2>
+      <p><strong>Account Number:</strong> 1019862435</p>
+      <p><strong>Bank:</strong> Zenith Bank</p>
+      <p><strong>Account Name:</strong> Hope Raisers Global Foundation</p>
+      <p><strong>Account Number:</strong>5074507402</p>
+      <p><strong>Currency: </strong> USD</p>
+      <p><strong>Bank: </strong> Zenith Bank PLC</p>
+      <button onclick="nextStep(3)">I Have Transferred</button>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step" id="step4">
+      <h2>You're Awesome!</h2>
+      <p>Redirecting you to WhatsApp to send your receipt...</p>
+    </div>
+  </div>
+ </div>
+  <script>
+    let currentStep = 1;
+
+    const messages = [
+      "Your donation saves lives",
+      "Be the reason someone smiles today",
+      "Giving is not just about making a donation..."
+    ];
+    let msgIndex = 0;
+    const messageEl = document.getElementById('message');
+
+    function rotateMessages() {
+      messageEl.textContent = messages[msgIndex];
+      msgIndex = (msgIndex + 1) % messages.length;
+    }
+    setInterval(rotateMessages, 3000);
+    rotateMessages();
+
+    document.getElementById('amount').addEventListener('change', function() {
+      if (this.value === 'custom') {
+        document.getElementById('customAmountField').style.display = 'block';
+      } else {
+        document.getElementById('customAmountField').style.display = 'none';
+      }
+    });
+
+    function nextStep(step) {
+      document.getElementById(`step${step}`).classList.remove('active');
+      const next = step + 1;
+      document.getElementById(`step${next}`).classList.add('active');
+
+      if (step === 3) {
+        showPopup();
+        const name = document.getElementById('name').value;
+        const amountSelect = document.getElementById('amount').value;
+        const customAmount = document.getElementById('customAmount').value;
+        const finalAmount = (amountSelect === 'custom') ? customAmount : amountSelect;
+
+        setTimeout(() => {
+          window.location.href = `https://wa.me/2348032011733?text=Hi,%20I've%20donated%20₦${finalAmount}%20to%20Hope%20Raisers%20Foundation.%20Please%20find%20attached%20my%20payment%20receipt.`;
+        }, 2000);
+      }
+    }
+
+    function showPopup() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'block';
+      setTimeout(() => popup.style.display = 'none', 3000);
+    }
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>
