@@ -1,440 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HRGF-FOUNDATION</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <style>
-        .logo1 {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-        }
-        .cac-number {
-        font-size: 14px;
-        color: white;
-        margin-top: 0.5px;
-        text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Unavailable</title>
 
-         /* Hero Section */
-    .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: 100vh;
-        padding: 2rem;
-        /* background-image: url('./images/hrg1.jpg'); */
-        color: white;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(
-        rgba(75, 0, 130, 0.8),  
-        rgba(212, 175, 55, 0.6) 
-    ), 
-    url('./images/hrg3.jpg');      
-    background-size: cover;     
-    background-position: center; 
-    color: white;              
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    }
-    
-    /* Content Wrapper */
-    .content {
-        z-index: 1;
-        max-width: 900px;
-        padding: 1rem;
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f6f7;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: #2d2d2d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
     }
 
-    /* Hero Title */
-    .hero h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        line-height: 1.2;
-        text-transform: capitalize;
-        letter-spacing: 2px;
-        margin-bottom: 1.5rem;
-        animation: fadeInDown 1s ease-in-out;
+    .container {
+      max-width: 520px;
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
-    /* Hero Text */
-    .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.9);
-        animation: fadeInUp 1.2s ease-in-out;
+    .icon {
+      font-size: 56px;
+      margin-bottom: 10px;
+      color: #e63946; /* subtle red for error symbol */
     }
 
-    /* Buttons */
-    .buttons {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: center;
+    h1 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      font-weight: 600;
+      color: #1c1c1c;
     }
 
-    .hero button {
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
-        border: none;
-        border-radius: 25px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #555;
+      margin: 0;
     }
+  </style>
 
-    .primary-btn {
-        background-color: white;
-        color: #333;
-    }
-
-    .primary-btn:hover {
-        background-color: yellow;
-        transform: translateY(-3px);
-        color: white;
-    }
-
-    .secondary-btn {
-        background-color: white;
-        color: #2575fc;
-    }
-
-    .secondary-btn:hover {
-        background-color: #f4f4f4;
-        transform: translateY(-3px);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1rem;
-        }
-
-        .buttons {
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .hero button {
-            width: 80%;
-            max-width: 300px;
-        }
-    }
-
-        /* Accent Shape */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            z-index: -1;
-            animation: pulse 3s infinite;
-        }
-
-        /* Keyframes for Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.8;
-            }
-            50% {
-                transform: translate(-50%, -50%) scale(1.1);
-                opacity: 0.5;
-            }
-        }
-       
-
-        
-
-        .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: gray;
-        }
-
-    </style>
 </head>
 <body>
-    <!-- Nav Section -->
-    <nav>
-        <div>
-            <div class="logo"><img src="./images/Screenshot 2025-04-29 195819.png" class="logo1" alt="logo"></div>
-            <p class="cac-number">CAC No: 97271</p> 
-        </div>
-        
-        <div class="menu">
-            <a href="./index.html">Home</a>
-            <a href="./about.html">About</a>
-            <a href="./gallery.html">Gallery</a>
-            <a href="./publication.html">Publication</a>
-            <a href="./christmas-with-hope.html">Christmas with hope</a>
-            <a href="./donation.html">Donate</a>
-            <a href="./idp.html">IDP</a>
-        
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    </nav>  
 
-    <section class="hero">
-        <div class="content">
-            <h1>Welcome to Hope Raisers Global foundation</h1>
-            <p>
-               leading Global organization, empowering Marginalised individuals, communities, and societies to overcome adversity, achieve their full potential, and live with dignity.
-            </p>
-            <div class="buttons">
-                <button class="primary-btn"><a href="./donation.html" style="text-decoration: none; color: gray;">Donate Now</a></button>
-            </div>
-        </div>
-    </section>
+  <div class="container">
+    <div class="icon">⚠️</div>
 
-   <!-- About Us Section -->
-    <div class="about-section">
-        <div class="about-container">
-            <!-- About Text -->
-            <div class="about-text">
-                <h2>Who we are</h2>
-                <h3>Your Support Is Really Powerful</h3>
-                <p style="text-align: justify;">
-                 Hope Raisers Global Foundation is a non-profit organization dedicated to spreading hope and positivity. Founded on the belief that everyone deserves a chance to thrive and succeed, the foundation works to empower internally displaced persons, people living in low income communities and individuals through various programs and initiatives.
-                 Through partnerships with local communities,  and other non-profit organizations, Hope Raisers Global Foundation provides support in areas such as education, empowerment and social services. By addressing the root causes of poverty and inequality, the foundation aims to create lasting change and improve the lives of those in need.
-                 With a team of dedicated volunteers and staff members, Hope Raisers Global Foundation is committed to making a difference in the world and inspiring others to join them in their mission. Through their work, they strive to build a more hopeful and compassionate society, where everyone has the opportunity to lead fulfilling and meaningful lives.
-                </p>
-                <a href="./history.html" class="read-more-btn">Read More</a>
-            </div>
+    <h1>Site Temporarily Unavailable</h1>
 
-            <!-- About Images -->
-            <div class="about-images">
-                <div class="image-box"><img src="./images/hrg1.jpg" alt=""></div>
-                <div class="image-box"><img src="./images/hrg2.jpg" alt=""></div>
-                <div class="image-box"><img src="./images/hrg3.jpg" alt=""></div>
-            </div>
-        </div>
-    </div>
-
-   
-    <section style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 20px auto; padding: 15px; border: 1px solid #ddd; border-radius: 8px; background-color: #fafafa;">
-    <h2 style="text-align: center; color: #2c3e50;">Impact Report</h2>
-    
-    <!-- Image placeholder -->
-    <div style="text-align: center; margin: 20px 0;">
-        <img src="./images/hrgf gallery/ggg76.jpg" alt="Hope Raisers Global Foundation" style="max-width: 100%; height: auto; border-radius: 8px;">
-    </div>
-
-    <p>Hope Raisers Global Foundation (HRGF) is a nonprofit organization dedicated to empowering lives and transforming communities. Here's a detailed impact analysis of their work:</p>
-
-    <h3 style="color: #2980b9; margin-top: 25px;">Key Areas of Impact</h3>
-    <ul style="list-style-type: disc; padding-left: 20px;">
-        <li><strong>Education:</strong> HRGF provides scholarships, digital literacy training, and informal education programs. In 2022, they awarded scholarships to 120 students and trained over 200 women in digital skills.</li>
-        <li><strong>Economic Empowerment:</strong> The foundation offers entrepreneurship training, microfinance programs, and vocational training. They trained 120 entrepreneurs and disbursed $2,000 in startup funds to 20 IDP women, creating 100 direct jobs through vocational training.</li>
-        <li><strong>Community Development:</strong> HRGF organizes community events, provides disaster relief, and engages in advocacy. They provided relief materials to 1000 households affected by economic hardship and organized over 20 community events.</li>
-    </ul>
-
-    <h3 style="color: #2980b9; margin-top: 25px;">Impact on IDP/Rural Women</h3>
-    <ul style="list-style-type: disc; padding-left: 20px;">
-        <li><strong>Financial Inclusion:</strong> HRGF empowers IDP and rural women by providing access to financial services, skills, and knowledge. This enables them to achieve financial independence and build a better future for themselves and their families.</li>
-        <li><strong>Empowerment:</strong> The foundation's programs focus on promoting financial literacy, providing training, and advocating for policies that support women's economic empowerment.</li>
-    </ul>
-
-    <h3 style="color: #2980b9; margin-top: 25px;">Partnerships and Funding</h3>
-    <ul style="list-style-type: disc; padding-left: 20px;">
-        <li><strong>Collaborations:</strong> HRGF collaborated with 40 organizations in 2024 and secured funding from individuals, partners, and a local tech organization.</li>
-        <li><strong>Budget:</strong> The foundation had a total budget of $10,000 in 2024, with 80% allocated to program expenses and 20% to administrative costs.</li>
-    </ul>
-
-    <h3 style="color: #2980b9; margin-top: 25px;">Future Plans</h3>
-    <ul style="list-style-type: disc; padding-left: 20px;">
-        <li><strong>Expansion:</strong> HRGF aims to expand its scholarship program to 1,000 students in 2025 and launch a mentorship program for young entrepreneurs.</li>
-        <li>Raise 1 million Small Holder Farmers across the 36 States and the FCT.</li>
-        <li><strong>Innovation:</strong> The foundation plans to deploy data-driven techniques to increase transparency and innovative solutions to enhance its activities.</li>
-    </ul>
-    </section>
-
-
-
-    <!-- Mission Section -->
-<section class="mission-section">
-    <div class="container">
-        <h2>Welcome to Hope Raisers Global foundation</h2>
-        <h3>Let Us Come Together to Make a Difference</h3>
-        <p>
-         To provide humanitarian aid, advocacy, education, and community development programs, bridging the gap between resources and needs, and fostering a culture of hope, resilience, and self-sufficiency.
-        </p>
-        <div class="row">
-            <div class="col">
-                <h4>Our Mission</h4>
-                <p>To provide humanitarian aid, advocacy, education, and community development programs, bridging the gap between resources and needs, and fostering a culture of hope, resilience, and self-sufficiency.</p>
-            </div>
-            <div class="col">
-                <h4>Our Vision</h4>
-                <p>To be a leading Global organization, empowering Marginalised individuals, communities, and societies to overcome adversity, achieve their full potential, and live with dignity.</p>
-            </div>
-        </div>
-        <div class="progress-bars">
-            <div class="progress">
-                <p>Donations</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 75%;"></div>
-                </div>
-            </div>
-            <div class="progress">
-                <p>Medical Help</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 90%;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
- <!-- YouTube Video Embed -->
- <div style="margin-top: 30px; text-align: center;">
-    <iframe 
-      width="560" 
-      height="315" 
-      src="https://www.youtube.com/embed/mAB7TE_qUNQ" 
-      title="HRGF Impact Video" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen 
-      style="max-width: 100%; height: auto; border-radius: 8px;">
-    </iframe>
+    <p>
+      This website is currently offline because the domain associated with it has expired.<br><br>
+      Please contact the administrator for further information.
+    </p>
   </div>
 
-<!-- Facts Section -->
-<section class="facts-section">
-    <div class="container">
-        <h3>Together, We're Changing Lives</h3>
-        <ul class="facts-list">
-            <li>Together, we're building a better future for children.</li>
-            <li>Empowering Marginalised individuals</li>
-            <li>Empowering Marginalised communities</li>
-            <li>Empowering Marginalised societies</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Fun Facts Section -->
-<section class="fun-facts">
-    <h3>Our Guiding Principle/Acronym </h3>
-    <div class="facts-container">
-        <div class="fact-item">
-            <h4>Discover</h4>
-            
-        </div>
-        <div class="fact-item">
-            <h4>Educate </h4>
-            
-        </div>
-        <div class="fact-item">
-            <h4>Empower </h4>
-           
-        </div>
-        <div class="fact-item">
-            <h4>Deploy</h4>
-            
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="./images/Screenshot 2025-01-23 093557.png" alt="Logo">
-            <span>HRGF Foundation</span>
-        </div>
-    </div>
-
-    <div class="sponsors">
-            <h3>Partners</h3>
-            <div class="carousel-container">
-                <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-                <div class="carousel" id="carousel">
-                    <img src="./images/hrg logos/imgg1.jpeg" alt="Sponsor 1">
-                    <img src="./images/hrg logos/imgg10.jpeg" alt="Sponsor 2">
-                    <img src="./images/hrg logos/imgg11.jpeg" alt="Sponsor 3">
-                    <img src="./images/hrg logos/imgg12.jpeg" alt="Sponsor 4">
-                    <img src="./images/hrg logos/imgg13.jpeg" alt="Sponsor 5">
-                    <img src="./images/hrg logos/imgg14.jpeg" alt="Sponsor 6">
-                    <img src="./images/hrg logos/imgg15.jpeg" alt="Sponsor 7">
-                    <img src="./images/hrg logos/imgg16.jpeg" alt="Sponsor 8">
-                    <img src="./images/hrg logos/imgg17.jpg" alt="Sponsor 9">
-                    <img src="./images/hrg logos/imgg2.jpeg" alt="Sponsor 15">
-                    <img src="./images/hrg logos/imgg23.jpeg" alt="Sponsor 16">
-                    <img src="./images/hrg logos/imgg4.jpeg" alt="Sponsor 17">
-                    <img src="./images/hrg logos/imgg5.jpeg" alt="Sponsor 18">
-                    <img src="./images/hrg logos/imgg6.jpeg" alt="Sponsor 19">
-                    <img src="./images/hrg logos/imgg7.jpeg" alt="Sponsor 20">
-                    <img src="./images/hrg logos/imgg8.jpeg" alt="Sponsor 21">
-                    <img src="./images/hrg logos/imgg9.jpeg" alt="Sponsor 22">
-                    <img src="./images/hrg logos/img24.jpeg" alt="Sponsor 24">
-                    <img src="./images/hrg logos/img25.jpeg" alt="Sponsor 25">
-                    <img src="./images/hrg logos/enitan.jpg" alt="Sponsor 26">
-                    <img src="./images/hrg logos/ease.jpg" alt="Sponsor 27">
-                    <img src="./images/hrg logos/df.jpg" alt="Sponsor 28">
-                    <img src="./images/hrg logos/2tuminis.jpg" alt="Sponsor 29">
-                    <img src="./images/hrg logos/tek4.jpg" alt="Sponsor 30">
-                </div>
-                <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
-            </div>
-        </div>
-
-        <!-- Font Awesome CDN -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-        <!-- Social Media Icons -->
-        <div style="text-align:center; padding:15px 0;">
-        <h3>Follow Us</h3>
-        <a href="https://www.facebook.com/share/161gBmp2J4/" target="_blank" style="margin:0 8px; color:#3b5998;"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="https://youtube.com/@hoperaisersglobalfoundation?" target="_blank" style="margin:0 8px; color:#ff0000;"><i class="fab fa-youtube fa-lg"></i></a>
-        <a href="https://www.instagram.com/hrgfoundation?" target="_blank" style="margin:0 8px; color:#c13584;"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="https://x.com/hrgfoundation?" target="_blank" style="margin:0 8px; color:#000;"><i class="fab fa-x-twitter fa-lg"></i></a>
-        <a href="https://www.linkedin.com/company/hoperaisersglobalfoundation/" target="_blank" style="margin:0 8px; color:#0e76a8;"><i class="fab fa-linkedin fa-lg"></i></a>
-        </div>
-
-
-    <div class="footer">
-        &copy; 2025 HRGF Foundation. All Rights Reserved.
-    </div>
-   
-</footer>
-
-    <script src="./script.js"></script>
 </body>
 </html>
